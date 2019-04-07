@@ -1,0 +1,82 @@
+.filterDiv {
+  float: right;
+  bottom: 200%;
+  border: 2px solid purple;
+  background-color: #B2D9E0;
+  color: purple;
+  width: 250px;
+  height: 250px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+  font-family: georgia;
+
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.btn {
+  border: 2px solid purple;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #B2D9E0;
+  cursor: pointer;
+  display:inline-block;
+  font-family: georgia;
+}
+
+.btn2 {
+  border: 2px;
+  outline: none;
+  background-color: #B2D9E0;
+  cursor: pointer;
+  display:inline-block;
+  height: 210px;
+  width: 210px;
+}
+
+h2{
+    padding: 10px 1px;
+    border-left: 5px solid purple ;
+    border-width: 5px;
+    background-color: lightblue
+    font-family: georgia;
+}
+
+.btn:hover {
+  background-color: #B2D9E0;
+}
+
+.btn.active {
+  background-color: #F7C600;
+  color: white;
+}
+
+.btn.inactive {
+  background-color: #B2D9E0;
+  color: white;
+    
+}
+
+img {
+  opacity: 0.75;
+  filter: alpha(opacity=50); 
+}
+
+img:hover {
+  opacity: 1.2;
+  filter: alpha(opacity=100); 
+}
+body {
+	background-image: url('http://www.nuigalway.ie/about-us/nw_d25v0332.jpg');
+	background-repeat: no-repeat;
+        background-size: 170%;
+        font-family: georgia;
+}

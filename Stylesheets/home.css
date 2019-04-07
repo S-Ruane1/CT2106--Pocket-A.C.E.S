@@ -1,0 +1,30 @@
+h1{
+	font-size:64px;
+	text-align:center;
+	font-family: monospace, cursive, sans-serif;
+	background-color:#9CCF00;
+	padding:0;
+	margin:0;
+}
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+}
+
+#header{
+	margin:0;
+	background-color:#9CCF00;
+}
+
+#infoCard{
+	background-color:#10D7FF;
+}
+
+#cardImg{
+	width:530px;
+}
+
+#carimg{
+	height:600px;
+}
+

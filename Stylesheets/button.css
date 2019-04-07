@@ -1,0 +1,24 @@
+.loginbox button{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox button[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2522;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    
+}
+
+.loginbox button[type="submit"]:hover
+{
+    cursor: pointer;
+    background: red;
+    color:#000;
+    
+}
