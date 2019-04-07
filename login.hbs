@@ -1,0 +1,30 @@
+<html>
+<head>
+<title> Log In </title>
+    <link rel="stylesheet" type="text/css" href="/css/login.css"> 
+    </head>
+<body>
+     <img src="Logo.jpg" height="80px" width="300px">
+    <div class="loginbox"> 
+    <img src="/images/avatar.png" class="avatar">
+       
+        <h1>Login Here</h1>
+        <form action= "includes/login.inc.php" method="post">
+            <p> Username </p> 
+            <input type="text" name="mailuid" placeholder="Enter Username/Email">
+            <p>Password</p>
+            <input type="password" name="pwd" placeholder="Enter Password">
+            <button type="submit" name="login-submit" value="Login">Submit</button>
+            <a href="recover.php">Lost your password?</a><br>
+              <a href="signup.php">Don't have an account?</a><br>
+        </form>
+        <form action="includes/logout.inc.php" method="post">
+            <button type="submit" name="logout-submit">Logout</button>
+            
+        
+        </form>
+        
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NUIG Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    
+    <link rel="stylesheet" href="/stylesheets/layout.css">
+    <link rel="stylesheet" href="/stylesheets/logout.css">
+    
+</head>
+<body>
+
+<header class="container-fluid">
+    
+    <img src='https://www.chromosome.ie/wp-content/uploads/2013/06/NUI_Galway_BrandMark_B.jpg' width=150px><p>NUIG Scheduler</p>
+    <div class="loginbox">
+     <button style="float: right" type="submit" name="login-submit" value="Login">Log Out</button>
+    </div>
+</header>    
+    
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+     <p> </p>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="ihome">Home</a></li>
+        <li><a href="tablesearch">Courses</a></li>
+        <li class="active"><a href="socs">Socs</a></li>
+        <li><a href="clubs">Clubs</a></li>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-10">
+      
+      <hr>
+      <h2>Societies</h2>
+      
+      <br>
+        
+      <div class="container"  >
+      
+        <!--<img src="baking.jpg">-->
+      </div>
+
+
+      <div class="row">
+        <div class="col-xs-6 text-center" id="socCards">
+          <h2>Baking Soc</h2>
+          <img class="img-top img-fluid img-rounded" style="max-height:200px"src="/images/baking.jpg">
+          <br>
+            <p style="text-align:left">
+              <br>
+                Whether you are a baking extraordinaire, or simply someone who enjoys a little cake every now and then, we believe that baking brings people together, no matter how advanced your baking skills may be!
+
+                
+            </p> 
+            <br>
+            <a href="https://socs.nuigalway.ie/societies.php?id=NDg4" class="btn btn-info btn-lg" role="button">Link to Website</a>
+        </div>
+        <div class="col-xs-6 text-center" id="socCards">
+          <h2>Video Game Soc</h2>
+          <img class="img-top img-fluid img-rounded" style="max-height:200px"src="/images/videogamesoc.jpg">
+          <br>
+            <p style="text-align:left">
+              <br>
+                Your first and last stop for everything video-game related in NUIG! Founded in January of 2014, and raised to full recognition in January of 2015, NUIG Video Game Society has a short yet vibrant history. With our mission to foster an ever larger, friendlier and more connected community within Galway we have set out to bring Video Games to everyone.
+            </p> 
+            <a href="https://socs.nuigalway.ie/societies.php?id=NDgw" class="btn btn-info btn-lg" role="button">Link to Website</a>
+        </div>
+      </div>
+
+      <div class="row">
+          <div class="col-xs-6 text-center" id="socCards">
+            <h2>DJ Soc</h2>
+            <img class="img-top img-fluid img-rounded" style="max-height:200px"src="/images/djsoc.jpg">
+            
+              <p style="text-align:left">
+                <br>
+                  Learn to DJ on top of the range equipment from dedicated, experienced Galway DJs from cdjs to vinyl and controllers and everything in between
+              </p> 
+              <br>
+              <a href="https://socs.nuigalway.ie/societies.php?id=Mzc=" class="btn btn-info btn-lg" role="button">Link to Website</a>
+          </div>
+          <div class="col-xs-6 text-center" id="socCards">
+            <h2>Anime Soc</h2>
+            <img class="img-top img-fluid img-rounded" style="max-height:200px"src="/images/animesoc.jpg">
+            <br>
+              <p style="text-align:left">
+                <br>
+                The Anime and Manga Society is a group which encourages people to be themselves and provides a place in which people with an interest in Anime and Manga, whether it be just watching Pokemon or binge watching multiple anime series during study week, can come and enjoy brilliant shows in even better company. 
+              </p> 
+              
+              <a href="https://socs.nuigalway.ie/societies.php?id=Mzc5" class="btn btn-info btn-lg" role="button">Link to Website</a>
+          </div>
+      </div>      
+     
+      <div class="row">
+          <div class="col-xs-6 text-center" id="socCards">
+            <h2>Comedy Soc</h2>
+            <img class="img-top img-fluid img-rounded" style="max-height:200px"src="/images/comedysoc.jpg">
+            <br>
+              <p style="text-align:left">
+                <br>
+                  You don't have to be funny to join Comedy Soc, just be able to laugh! We are a society for those who love comedy in all its weird and wonderful forms.
+              </p> 
+              
+              <a href="https://socs.nuigalway.ie/societies.php?id=Mjg=" class="btn btn-info btn-lg" role="button">Link to Website</a>
+          </div>
+          <div class="col-xs-6 text-center" id="socCards">
+            <h2>Comp Soc</h2>
+            <img class="img-top img-fluid img-rounded" style="max-height:200px"src="/images/compsoc.jpg">
+            <br>
+              <p style="text-align:left">
+                <br>
+                  We’re the longest running Computer Society in Ireland.
+                  A social outlet for NUI Galway students interested in all things technology.
+              </p> 
+              <a href="https://compsoc.ie/" class="btn btn-info btn-lg" role="button">Link to Website</a>
+          </div>
+      </div>
+      
+      <!--
+      <div class="filterDiv Baking"><a href="https://socs.nuigalway.ie/societies.php?id=NDg4">Baking Soc</a>
+      <div class="filterDiv Game"><a href="https://socs.nuigalway.ie/societies.php?id=NDgw">Game Soc</a></div>
+      <div class="filterDiv DJ"><a href="https://socs.nuigalway.ie/societies.php?id=Mzc=">DJ Soc</a></div>
+      <div class="filterDiv Anime"><a href ="https://socs.nuigalway.ie/societies.php?id=Mzc5">Anime Soc</a></div>
+      <div class="filterDiv Comedy"><a href="https://socs.nuigalway.ie/societies.php?id=Mjg=">Comedy Soc</a></div>
+      <div class="filterDiv Comp"><a href="https://compsoc.ie/">Compsoc</a></div>
+    -->
+  
+</div>
+      
+      
+        
+
+      
+      
+    </div>
+  </div>
+</div>
+
+
+
+    
+</body>
+</html>

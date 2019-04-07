@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>NUIG Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    
+    <link rel="stylesheet" href="/stylesheets/layout.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/TableInfo.css">
+    <link rel="stylesheet" href="/stylesheets/logout.css">
+    
+</head>
+<body>
+
+<header class="container-fluid">
+    
+    <img src='https://www.chromosome.ie/wp-content/uploads/2013/06/NUI_Galway_BrandMark_B.jpg' width=150px><p>NUIG Scheduler</p>
+    <div class="loginbox">
+     <button style="float: right" type="submit" name="login-submit" value="Login">Log Out</button>
+    </div>
+</header>     
+    
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+     <p> </p>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="ihome">Home</a></li>
+        <li class="active"><a href="tablesearch">Courses</a></li>
+        <li ><a href="socs">Socs</a></li>
+        <li><a href="clubs">Clubs</a></li>
+      </ul><br>
+    </div>
+
+
+<div>
+<h2 style="Background-color: clear;> &nbsp;&nbsp; Search for your course</h2>
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('IT')"> Computer Science & IT</button>
+  <button class="btn" onclick="filterSelection('CivEng')"> Civil Engineering</button>
+  <button class="btn" onclick="filterSelection('Bio')"> Biomedical Engineering</button>
+  <button class="btn" onclick="filterSelection('ECE')"> Electronic & Computer Engineering</button>
+  <button class="btn" onclick="filterSelection('ES')"> Energy Systems Engineering</button>
+  <button class="btn" onclick="filterSelection('Mech')"> Mechanical Engineering</button>
+</div>
+ <br><br>
+<div class="container">
+  <div class="filterDiv IT">
+	<button class="btn2">
+
+	<a href="1BCT">
+	<img src="/images/1BCT.jpg" alt="1BCT1" style="width: 190px; height: 180px; border: 2px solid purple;"> 1BCT1
+	</a>
+	</button></div>
+  <div class="filterDiv CivEng">
+	<button class="btn2">
+	<a href="1BE">
+	<img src="/images/1BE.jpg" alt="1BE" style=" width:190px; height:180px;  border: 2px solid purple;">
+        <br>
+	1BE
+	</a>
+
+  </button></div>
+  <div class="filterDiv Bio">
+  <button class="btn2">
+	<a href="1BG">
+	<img src="/images/1BG.jpg" alt="1BG" style="width: 190px; height:180px;  border: 2px solid purple;">
+	1BG
+	</a>
+  </button>
+  </div>
+  <div class="filterDiv ECE">
+  <button class="btn2"; style="background-color: #B2D9E0;">
+	<a href="1ECE">
+	<img src="/images/1ECE.jpeg" alt="1BLE" style="width: 190px; height: 180px;  border: 2px solid purple;">
+	1ECE
+
+	</a>
+  </button>
+  </div>
+  <div class="filterDiv ES">
+  <button class="btn2"; style="background-color: #B2D9E0;">
+	<a href="1BSE">
+	<img src="/images/1BSE.jpg" alt="1BSE" style="width:190px; height:180px; border: 2px solid purple;">
+	1BSE
+
+	</a>
+  </button></div>
+  <div class="filterDiv Mech">
+  <button class="btn2">
+	<a href="1BM">
+	<img src="/images/1BM.jpg" alt="1BM" style="width: 190px; height:180px; border: 2px solid purple;">
+	1BM
+	</a>
+      </button></div>
+  <div class="filterDiv IT">
+  <button class="btn2">
+	<a href="2BCT">
+	<img src="/images/2BCT.jpg" alt="2BCT1" style="width:190px; height:180px; border: 2px solid purple;">
+	2BCT1
+	
+	</a>
+  </button></div>
+  <div class="filterDiv CivEng">
+  <button class="btn2">
+	<a href="2BE">
+	<img src="/images/2BE.jpg" alt="1BE" style=" width:190px; height:180px; border: 2px solid purple;">
+	2BE
+	</a>
+  </button></div>
+  <div class="filterDiv Bio">
+  <button class="btn2">
+	<a href="2BG">
+	<img src="/images/2BG.jpg" alt="1BG" style="width:190px; height:180px; border: 2px solid purple;">
+        <br>
+	2BG
+	</a>
+  </button></div>
+  <div class="filterDiv ECE">
+  <button class="btn2">
+	<a href="2ECE">
+	<img src="/images/2ECE.jpg" alt="1BLE" style="width:190px; height:180px; border: 2px solid purple;">
+	2ECE
+	
+	</a>
+  </button></div>
+  <div class="filterDiv ES">
+  <button class="btn2">
+	<a href="2BSE">
+	<img src="/images/2BSE.jpg" alt="2BSE" style="width:190px; height:180px; border: 2px solid purple;">
+	2BSE
+	
+	</a>
+  </button></div>
+  <div class="filterDiv Mech">
+  <button class="btn2">
+	<a href="2BM">
+	<img src="/images/2BM.jpg" alt="2BM" style="width: 190px; height:180px; border: 2px solid purple;">
+	2BM
+	
+	</a>
+  </button></div>
+  <div class="filterDiv IT">
+  <button class="btn2">
+  <a href="AlertLinkTest">
+	<img src="/images/3BCT.jpg" alt="3BCT1" style="width: 190px; height:180px; border: 2px solid purple;">
+
+	3BCT1
+      </a>
+  </button></div>
+  <div class="filterDiv CivEng">
+  <button class="btn2">
+	<img src="/images/3BE.jpg" alt="1BE" style="width: 190px; height:180px; border: 2px solid purple;">
+	<a href="AlertLinkTest">
+        <br>
+	3BE 
+	</a>
+	</button></div>
+  <div class="filterDiv Bio">
+  <button class="btn2">
+	<img src="/images/3BG.jpg" alt="1BG" style="width: 190px; height:180px; border: 2px solid purple;">
+	<a href="AlertLinkTest">
+        <br>
+	3BG
+	</a>
+	</button></div>
+  <div class="filterDiv ECE">
+  <button class="btn2">
+	<img src="/images/3ECE.jpeg" alt="1BLE" style="width: 190px; height:180px; border: 2px solid purple;">
+	<a href="AlertLinkTest">
+        <br>
+	3ECE
+	</a>
+  </button></div>
+  <div class="filterDiv ES">
+  <button class="btn2">
+	<img src="/images/3BSE.jpg" alt="3BSE" style="width: 190px; height:180px; border: 2px solid purple;">
+	<a href="AlertLinkTest">
+        <br>
+	3BSE
+	</a>
+  </button></div>
+  <div class="filterDiv Mech">
+  <button class="btn2">
+	<img src="/images/3BM.jpg" alt="3BM" style="width: 190px; height:180px; border: 2px solid purple;">
+	<a href="AlertLinkTest">
+        <br>
+	3BM
+	</a>
+  </button></div>
+  <div class="filterDiv IT">
+  <button class="btn2">
+	<a href="4BCT">
+	<img src="/images/4BCT.jpg" alt="4BCT1" style="width: 190px; height:180px; border: 2px solid purple;">
+        <br>
+	4BCT1
+	
+	</a>
+  </button></div>
+  <div class="filterDiv CivEng">
+  <button class="btn2">
+	<a href="4BE">
+	<img src="/images/4BE.jpg" alt="4BE" style=" width:190px; height:180px; border: 2px solid purple;">
+        <br>
+	4BE 
+	</a>
+  </button></div>
+  <div class="filterDiv Bio">
+  <button class="btn2">
+	<a href="4BG">
+	<img src="/images/4BG.jpg" alt="4BE" style=" width:190px; height:180px; border: 2px solid purple;">
+        <br>
+	4BG
+	</a>
+  </button></div>
+  <div class="filterDiv ECE">
+  <button class="btn2">
+	<a href="4ECE">
+	<img src="/images/4ECE.jpg" alt="4BE" style=" width:190px; height:180px; border: 2px solid purple;">
+        <br>
+	4ECE
+	</a>
+  </button></div>
+  <div class="filterDiv ESE">
+  <button class="btn2">
+	<a href="4BSE">
+	<img src="/images/4BSE.jpg" alt="4BE" style=" width:190px; height:180px; border: 2px solid purple;">
+        <br>
+	4BSE
+	</a>
+  </button></div>
+  <div class="filterDiv Mech">
+  <button class="btn2">
+	<a href="4BM">
+	<img src="/images/4BM.jpg" alt="4BE" style=" width:190px; height:180px; border: 2px solid purple;">
+        <br>
+	4BM
+	</a>
+  </button></div>
+  
+</div>
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+      
+</body>
+</html>
+     
