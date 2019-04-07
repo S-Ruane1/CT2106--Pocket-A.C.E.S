@@ -1,0 +1,55 @@
+<html>
+  <head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+   <title>Error 404: Timetable not found!</title>
+    </head>
+	 <div class="loginbox">
+     <div class="loginbox">
+     
+        <button style="float: right" type="submit" name="logout-submit"><a href="ehome"><p style="font-color: #fff; font-size: 10px;">Logout</p></a></button>
+    </div>
+    </div>
+	<p style="position: absolute";>Error 404, Timetable not found! There is no timetable available for this semester. Students are on work placement at this time.</p>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<script src='template/js/jquery.textarea-expander.js'></script>
+     
+    <link rel="stylesheet" href="/stylesheets/Timetable.css">
+	<link rel="stylesheet" href="/stylesheets/login.css">
+<script type="text/javascript">
+
+$(document).ready(function() { 
+var regex,v,l,c,b,i,contapara=3;
+
+
+
+
+$( "#wnd_Addparam" ).dialog({
+            autoOpen: false,
+            width: '500',
+	    height: '500',
+            modal: true,
+            resizable:false,
+            buttons: {
+                "Return to Course selection page": function() {
+                   location.href="tablesearch";
+    return false;  },
+           
+                "Take me to the home page": function(){
+				location.href="ihome";
+                }
+            },
+            close: {}
+        });
+
+
+                $( "#wnd_Addparam" ).dialog( "open" );
+
+
+                    });
+</script>
+<body>
+
+<div id="wnd_Addparam"></div>
+</body>
+</html>
